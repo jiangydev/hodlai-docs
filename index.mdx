@@ -1,97 +1,39 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+description: "HodlAI 是一个基于 BNB 智能链 (BSC) 构建的去中心化 AI 基础设施协议，支持“持有即访问”的永久 AI 计算，无需订阅费"
+title: "介绍"
+icon: "house-blank"
 ---
 
-## Setting up
+## 技术栈
 
-Get your documentation site up and running in minutes.
+- **区块链**: BNB Smart Chain (BSC)
+- **智能合约**: Solidity ^0.8.17 + OpenZeppelin
+- **前端**: Next.js 14 + Wagmi + Viem
+- **后端**: Node.js v22 + OpenClaw (Agent Runtime)
+- **协议/标准**: ERC-20 (Token), ERC-8004 (Agent Identity)
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+## 支持的网络
 
-## Make it yours
+- **BNB Smart Chain Mainnet** (Chain ID: 56)
 
-Design a docs site that looks great and empowers your users.
+## 合约地址
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+| 网络              | 名称           | 地址                                           |
+| --------------- | ------------ | -------------------------------------------- |
+| **BNB Mainnet** | **\$HODLAI** | `0x987e6269c6b7ea6898221882f11ea16f87b97777` |
+| **BNB Mainnet** | **Treasury** | `0x51Ecf37f193f218204b6b6385C77F5809ceCe8F0` |
+| **BNB Mainnet** | **Agent 89** | _(ERC-8004 Registration)_                    |
 
-## Create beautiful pages
+## 功能
 
-Everything you need to create world-class documentation.
+- **持有即用**：持有价值 10 美元的 HODLAI 代币，即可获得每日约 1 美元的 AI 计算额度。无需每月支付费用。
+- **税金入库**: 3% 的交易税将自动注入 API 金库（`...Ce8F0`），用于支付上游提供商。
+- **钻石手机制**: API 配额将逐步解锁（24 小时内从 0% 解锁至 100%），以激励长期持有。
+- **去中心化代理身份**：符合 BNB 链上的 **ERC-8004** 标准，可实现无需信任的代理验证。
+- **Gas 高效**：针对 BNB 智能链的低延迟、高吞吐量环境进行了优化。
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## 资源
 
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+- **网站**: https://hodlai.fun
+- **HodlAI Chat**: https://ai.hodlai.fun
+- **推特**: [@hodlai_bsc](https://twitter.com/hodlai_bsc)

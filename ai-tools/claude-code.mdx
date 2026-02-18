@@ -1,43 +1,74 @@
 ---
-title: "Claude Code setup"
-description: "Configure Claude Code for your documentation workflow"
+title: "Claude Code"
+description: "Claude Code 配置指南"
 icon: "asterisk"
 ---
 
-Set up Claude Code to help you write and maintain your Mintlify documentation.
+## 前置条件
 
-## Prerequisites
+- 获得 HodlAI API Key
 
-- Active Claude subscription (Pro, Max, or API access)
-
-## Setup
+## 配置步骤
 
 <Steps>
-<Step title="Install Claude Code">
-  ```bash
-  npm install -g @anthropic-ai/claude-code
-  ```
-</Step>
+  <Step title="安装 Node.js，版本必须 >= 22">
+    下载地址：https://nodejs.org/zh-cn/download
+  </Step>
+  <Step title="安装 Claude Code">
+    在命令行界面中执行：
 
-<Step title="Install the Mintlify skill">
-  In your docs directory, run:
+    ```bash
+    npm install -g @anthropic-ai/claude-code
+    ```
 
-  ```bash
-  npx skills add https://mintlify.com/docs
-  ```
+    安装完成后，你可以通过 `claude --version` 检查是否安装成功，以及确认安装的版本。
+  </Step>
+  <Step title="配置 HodlAI API Key & 设置模型">
+    编辑或新增 `settings.json` 文件，新增或修改里面的 env 字段
 
-  This gives Claude Code Mintlify's component reference, writing standards,
-  and workflow guidance.
-</Step>
+    > 文件位置：
+    >
+    > - MacOS & Linux 为 `~/.claude/settings.json`
+    > - Windows 为`用户目录/.claude/settings.json`
 
-<Step title="Customize project instructions">
-  Edit `AGENTS.md` in your project root to add project-specific terminology,
-  style preferences, and content boundaries.
-</Step>
+    ```json
+    {
+      "env": {
+        "ANTHROPIC_BASE_URL": "https://api.hodlai.fun",
+        "ANTHROPIC_AUTH_TOKEN": "这里填写你的 HodlAI API Key",
+        "ANTHROPIC_DEFAULT_MODEL": "claude-sonnet-4.5",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+      }
+    }
+    ```
+  </Step>
+  <Step title="开始使用 Claude Code">
+    ```bash
+    claude
+    ```
+  </Step>
+</Steps>
 
-<Step title="Start writing with Claude Code">
-  ```bash
-  claude
-  ```
-</Step>
+## 常见问题
+
+### 如何切换使用的模型
+
+<Steps>
+  <Step title="查询可用的模型">
+    查询页面：https://api.hodlai.fun/pricing
+  </Step>
+  <Step title="配置其他模型">
+    编辑 `settings.json` 文件，修改里面的 env 字段
+
+    ```json
+    {
+      "env": {
+        "ANTHROPIC_DEFAULT_MODEL": "claude-sonnet-4.5",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4.5",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4.5",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4.5"
+      }
+    }
+    ```
+  </Step>
 </Steps>
