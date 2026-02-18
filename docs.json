@@ -30,8 +30,8 @@
     ]
   },
   "logo": {
-    "light": "/images/hodlai-light-logo.jpg",
-    "dark": "/images/hodlai-dark-logo.jpg"
+    "light": "/images/hodlai-light-logo.png",
+    "dark": "/images/hodlai-dark-logo.png"
   },
   "navbar": {
   },
