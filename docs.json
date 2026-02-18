@@ -16,13 +16,15 @@
           {
             "group": "入门",
             "pages": [
-              "index"
+              "index",
+              "hodl-ai-and-api-key"
             ]
           },
           {
             "group": "开发工具接入",
             "pages": [
-              "ai-tools/claude-code"
+              "ai-tools/claude-code",
+              "ai-tools/open-claw"
             ]
           }
         ]
